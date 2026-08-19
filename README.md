@@ -73,14 +73,17 @@ The broader Cloud Resume Challenge remains in progress. Items that have not genu
 │   ├── decision-log.md
 │   └── lessons-learned.md
 ├── website/
-│   └── README.md
+│   ├── index.html
+│   ├── styles.css
+│   ├── project-01.html
+│   └── ...
 ├── backend/
 │   └── README.md
 └── diagrams/
     └── README.md
 ```
 
-The `website/` and `backend/` folders are intentionally prepared for the reviewed production source files. Before committing production code, secrets, credentials, account-specific values and deployment artefacts should be checked and excluded where appropriate.
+The `website/` folder contains the reviewed Website Project source. The `backend/` folder is intentionally reserved for the real deployed visitor-counter Lambda source once it has been exported and reviewed; no backend code is fabricated in this repository.
 
 ## Key principle
 

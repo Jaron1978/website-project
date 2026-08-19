@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ron Jackson | Projects</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+        /* Keep the full desktop navigation on a single line. */
+        @media (min-width: 901px) {
+            header .wrapper { max-width: 1280px; }
+            header nav ul { flex-wrap: nowrap; gap: 0.9rem; }
+            header nav a { white-space: nowrap; font-size: 0.92rem; }
+        }
+    
+        .project-card-link { color: inherit; text-decoration: none; display: block; height: 100%; }
+        .project-card-link .project-card { height: 100%; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+        .project-card-link:hover .project-card, .project-card-link:focus-visible .project-card { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(15,23,42,.10); }
+        .project-card-link:focus-visible { outline: 3px solid #7c3aed; outline-offset: 4px; border-radius: 16px; }
+        .project-open-cue { margin-top: 1rem; font-weight: 700; color: #6d28d9; }
+</style>
+</head>
+<body>
+<header>
+<div class="wrapper">
+<a class="site-title" href="index.html">Ron <span>Jackson</span></a>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="written-statement.html">Written Statement</a></li>
+<li><a href="work-experience.html">Work Experience</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="certifications.html">Certifications</a></li>
+<li><a class="active" href="projects.html">Projects</a></li>
+<li><a href="cloud-resume-challenge.html">Cloud Resume Challenge</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="wrapper">
+<div class="page-hero projects-page-hero">
+<div>
+<h1>Projects</h1>
+<p>Practical cloud and AI projects built to turn certification knowledge into hands-on experience.</p>
+</div>
+<img alt="Illustration representing AWS, Azure, AI and cloud project work" class="projects-hero-image" src="projects-hero.jpg"/>
+</div>
+<p class="section-label">Project Portfolio</p>
+<div class="projects-grid">
+<a class="project-card-link" href="project-01.html"><article class="project-card">
+<div class="project-card-topline">
+<span class="project-id">PROJECT 01</span>
+<span class="project-status status-complete">COMPLETED</span>
+</div>
+<h2>Cloud Resume &amp; Portfolio Website</h2>
+<p class="project-summary">Completed cloud-hosted portfolio website showcasing professional experience, certifications and project work, with AWS infrastructure, HTTPS, contact handling and a persistent serverless visitor counter.</p>
+<div class="badge-list">
+<span class="badge">AWS</span><span class="badge">S3</span><span class="badge">CloudFront</span><span class="badge">Route 53</span><span class="badge">HTML/CSS</span><span class="badge">GitHub</span>
+</div>
+<div class="project-progress">
+<span>Status</span>
+<strong>Website Phase 1 complete</strong>
+</div>
+<div class="project-open-cue">View project →</div></article></a>
+<a class="project-card-link" href="project-02.html"><article class="project-card">
+<div class="project-card-topline">
+<span class="project-id">PROJECT 02</span>
+<span class="project-status status-planned">PLANNED</span>
+</div>
+<h2>Ron Bot</h2>
+<p class="project-summary">A cost-conscious AI agent project designed to demonstrate practical AWS, Python, automation and agentic AI skills.</p>
+<div class="badge-list">
+<span class="badge">AI Agent</span><span class="badge">AWS</span><span class="badge">Python</span><span class="badge">Automation</span>
+</div>
+<div class="project-open-cue">View project →</div></article></a>
+<a class="project-card-link" href="project-03.html"><article class="project-card">
+<div class="project-card-topline">
+<span class="project-id">PROJECT 03</span>
+<span class="project-status status-planned">PLANNED</span>
+</div>
+<h2>Azure AI Project</h2>
+<p class="project-summary">A future Microsoft Azure AI build that will provide practical evidence alongside certification study and broaden the portfolio across cloud platforms.</p>
+<div class="badge-list">
+<span class="badge">Azure</span><span class="badge">AI</span><span class="badge">Microsoft</span>
+</div>
+<div class="project-open-cue">View project →</div></article></a>
+<a class="project-card-link" href="cloud-resume-challenge.html"><article class="project-card project-card-active">
+<div class="project-card-topline">
+<span class="project-id">PROJECT 04</span>
+<span class="project-status status-active">ONGOING</span>
+</div>
+<h2>Cloud Resume Challenge</h2>
+<p class="project-summary">Continuing the broader Cloud Resume Challenge beyond the completed portfolio website, with progress tracked honestly as the remaining cloud engineering stages are completed.</p>
+<div class="badge-list">
+<span class="badge">AWS</span><span class="badge">Cloud</span><span class="badge">Serverless</span><span class="badge">DevOps</span>
+</div>
+<div class="project-progress">
+<span>Status</span>
+<strong>Ongoing challenge</strong>
+</div>
+<div class="project-open-cue">View project →</div></article></a>
+</div>
+
+
+</div>
+</main>
+<footer>
+<div class="wrapper">
+<p>© 2026 Ron Jackson — <a href="mailto:jacksonr1978@gmail.com">jacksonr1978@gmail.com</a></p>
+<p><a href="https://www.ron-jackson.co.uk">www.ron-jackson.co.uk</a></p>
+</div>
+</footer>
+</body>
+</html>

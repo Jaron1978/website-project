@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron Jackson | Certifications</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media (min-width: 901px) {
+            header .wrapper { max-width: 1280px; }
+            header nav ul { flex-wrap: nowrap; gap: 0.9rem; }
+            header nav a { white-space: nowrap; font-size: 0.92rem; }
+        }
+        .featured-cert-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+        .featured-cert-card {
+            background: #fff;
+            border: 1px solid #dbe4f0;
+            border-top: 3px solid #2563eb;
+            border-radius: 12px;
+            padding: 1.4rem;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+        .cert-badge-image-wrap {
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .cert-badge-image {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            display: block;
+        }
+        .featured-cert-card h2 { margin: 0.2rem 0 0.35rem; font-size: 1.12rem; line-height: 1.35; }
+        .featured-cert-card p { margin: 0.3rem 0; }
+        .cert-provider { font-weight: 600; color: #334155; }
+        .cert-status-line { color: #64748b; font-size: 0.9rem; }
+        .cert-actions { margin-top: auto; padding-top: 1rem; }
+        .verify-link {
+            display: inline-block;
+            border: 1px solid #2563eb;
+            border-radius: 6px;
+            padding: 0.55rem 0.8rem;
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .verify-link:hover, .verify-link:focus { background: #eff6ff; }
+        .credential-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .credential-row {
+            background: #fff;
+            border: 1px solid #dbe4f0;
+            border-radius: 10px;
+            padding: 1rem 1.1rem;
+        }
+        .credential-row h3 { margin: 0 0 0.3rem; font-size: 1rem; }
+        .credential-row p { margin: 0.2rem 0; font-size: 0.92rem; }
+        .status-current { color: #166534; font-weight: 700; }
+        .status-historical { color: #92400e; font-weight: 700; }
+        .cert-roadmap { margin-bottom: 2rem; }
+        .cert-note { margin-top: 1rem; }
+        @media (max-width: 900px) {
+            .featured-cert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 620px) {
+            .featured-cert-grid, .credential-list { grid-template-columns: 1fr; }
+            .featured-cert-card { padding: 1.15rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <a href="index.html" class="site-title">Ron <span>Jackson</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="written-statement.html">Written Statement</a></li>
+                    <li><a href="work-experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="certifications.html" class="active">Certifications</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="cloud-resume-challenge.html">Cloud Resume Challenge</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="page-hero">
+                <h1>Certifications</h1>
+                <p>Verified credentials across cloud, Python, AI and Linux, supported by a wider foundation in networking and IT.</p>
+            </div>
+
+            <p class="section-label">Featured Certifications</p>
+            <div class="featured-cert-grid">
+                <article class="featured-cert-card">
+                    <div class="cert-badge-image-wrap"><img class="cert-badge-image" src="aws-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner badge"></div>
+                    <span class="meta">[ Cloud ]</span>
+                    <h2>AWS Certified Cloud Practitioner</h2>
+                    <p class="cert-provider">Amazon Web Services</p>
+                    <p>Foundational AWS certification covering core services, cloud concepts, security, architecture and pricing.</p>
+                    <p class="cert-status-line">Current credential · Expires 29 Nov 2027</p>
+                    <div class="cert-actions"><a class="verify-link" href="https://www.credly.com/badges/4825276f-b5e7-4b28-b126-1cdbe8781a90/public_url" target="_blank" rel="noopener noreferrer">Verify on Credly</a></div>
+                </article>
+
+                <article class="featured-cert-card">
+                    <div class="cert-badge-image-wrap"><img class="cert-badge-image" src="google-cloud-digital-leader.png" alt="Google Cloud Digital Leader badge"></div>
+                    <span class="meta">[ Cloud ]</span>
+                    <h2>Cloud Digital Leader</h2>
+                    <p class="cert-provider">Google Cloud</p>
+                    <p>Foundational knowledge of Google Cloud services, cloud transformation, data, AI, security and business use cases.</p>
+                    <p class="cert-status-line">Current credential · Expires 28 Mar 2027</p>
+                    <div class="cert-actions"><a class="verify-link" href="https://www.credly.com/badges/78291d8f-d66b-465e-8c91-d51d4b2f5b19/public_url" target="_blank" rel="noopener noreferrer">Verify on Credly</a></div>
+                </article>
+
+                <article class="featured-cert-card">
+                    <div class="cert-badge-image-wrap"><img class="cert-badge-image" src="azure-fundamentals.png" alt="Microsoft Certified Azure Fundamentals badge"></div>
+                    <span class="meta">[ Cloud ]</span>
+                    <h2>Microsoft Certified: Azure Fundamentals</h2>
+                    <p class="cert-provider">Microsoft</p>
+                    <p>Foundational understanding of Azure services, cloud concepts, security, governance, pricing and support.</p>
+                    <p class="cert-status-line">Issued 11 Sep 2020</p>
+                    <div class="cert-actions"><a class="verify-link" href="https://www.credly.com/badges/44bcf662-6a5d-427f-8465-b00cd1fa32e7/public_url" target="_blank" rel="noopener noreferrer">Verify on Credly</a></div>
+                </article>
+
+                <article class="featured-cert-card">
+                    <div class="cert-badge-image-wrap"><img class="cert-badge-image" src="pcep-python.png" alt="PCEP Certified Entry-Level Python Programmer badge"></div>
+                    <span class="meta">[ Python ]</span>
+                    <h2>PCEP™ – Certified Entry-Level Python Programmer</h2>
+                    <p class="cert-provider">Python Institute</p>
+                    <p>Entry-level Python credential demonstrating knowledge of core syntax, data types, control flow and programming fundamentals.</p>
+                    <p class="cert-status-line">Issued 2 Feb 2024</p>
+                    <div class="cert-actions"><a class="verify-link" href="https://www.credly.com/badges/53e0cecb-135d-49e9-b8bc-91026887b95d/public_url" target="_blank" rel="noopener noreferrer">Verify on Credly</a></div>
+                </article>
+
+                <article class="featured-cert-card">
+                    <div class="cert-badge-image-wrap"><img class="cert-badge-image" src="ibm-ai.png" alt="IBM Getting Started with Artificial Intelligence badge"></div>
+                    <span class="meta">[ AI ]</span>
+                    <h2>Getting Started with Artificial Intelligence</h2>
+                    <p class="cert-provider">IBM SkillsBuild</p>
+                    <p>Foundational credential covering AI concepts, common applications, generative AI and practical prompt development.</p>
+                    <p class="cert-status-line">Issued 22 Jan 2026</p>
+                    <div class="cert-actions"><a class="verify-link" href="https://www.credly.com/badges/84de6a75-718a-47b6-b9da-f3e84c369468/public_url" target="_blank" rel="noopener noreferrer">Verify on Credly</a></div>
+                </article>
+
+                <article class="featured-cert-card">
+                    <div class="cert-badge-image-wrap"><img class="cert-badge-image" src="linux-essentials.png" alt="Linux Professional Institute Linux Essentials badge"></div>
+                    <span class="meta">[ Linux ]</span>
+                    <h2>Linux Essentials Certificate</h2>
+                    <p class="cert-provider">Linux Professional Institute</p>
+                    <p>Foundational Linux certification covering command-line usage, open source, permissions, security and administration concepts.</p>
+                    <p class="cert-status-line">Issued 14 May 2023</p>
+                    <div class="cert-actions"><a class="verify-link" href="https://www.credly.com/badges/4c8b5136-7797-4f88-a4ee-a0b5612e3987/public_url" target="_blank" rel="noopener noreferrer">Verify on Credly</a></div>
+                </article>
+            </div>
+
+            <p class="section-label">Additional &amp; Historical Credentials</p>
+            <div class="credential-list">
+                <article class="credential-row">
+                    <h3>Enterprise Design Thinking Practitioner</h3>
+                    <p>IBM SkillsBuild · Issued 22 Jan 2026</p>
+                    <p class="status-current">Additional current credential</p>
+                </article>
+                <article class="credential-row">
+                    <h3>CompTIA A+</h3>
+                    <p>CompTIA · Originally issued 23 Dec 2010</p>
+                    <p class="status-historical">Historical credential</p>
+                </article>
+                <article class="credential-row">
+                    <h3>CCNA / Cisco Certified Network Associate Routing &amp; Switching</h3>
+                    <p>Cisco · Expired 21 Aug 2023</p>
+                    <p class="status-historical">Historical / expired</p>
+                </article>
+                <article class="credential-row">
+                    <h3>CompTIA Network+ ce</h3>
+                    <p>CompTIA · Expired 9 Aug 2022</p>
+                    <p class="status-historical">Historical / expired</p>
+                </article>
+                <article class="credential-row">
+                    <h3>CompTIA IT Operations Specialist (CIOS)</h3>
+                    <p>CompTIA · Expired 9 Aug 2022</p>
+                    <p class="status-historical">Historical / expired</p>
+                </article>
+                <article class="credential-row">
+                    <h3>Juniper Networks Certified Associate, Junos (JNCIA-Junos)</h3>
+                    <p>Juniper Networks · Expired 22 May 2023</p>
+                    <p class="status-historical">Historical / expired</p>
+                </article>
+                <article class="credential-row">
+                    <h3>Understanding of Cisco Network Devices — Level 200</h3>
+                    <p>Cisco · Issued 24 Feb 2020</p>
+                    <p class="status-historical">Supporting credential</p>
+                </article>
+            </div>
+
+            <p class="section-label">Certification Roadmap</p>
+            <div class="cert-roadmap">
+                <div class="roadmap-card roadmap-current">
+                    <span class="project-status status-active">IN PROGRESS</span>
+                    <h2>AWS Certified AI Practitioner</h2>
+                    <p>Current AI certification focus, building on existing AWS foundations. This will only move into Featured Certifications once earned.</p>
+                </div>
+                <div class="roadmap-card">
+                    <span class="project-status status-planned">PLANNED</span>
+                    <h2>Microsoft Azure AI Fundamentals (AI-901)</h2>
+                    <p>Planned Microsoft AI credential to complement the existing Azure, AWS and GCP foundation. This remains planned until earned.</p>
+                </div>
+            </div>
+
+            <div class="card cert-note">
+                <span class="meta">[ Verified &amp; Expandable ]</span>
+                <h2>Digital Certification Badges</h2>
+                <p>Featured credentials use official badge artwork and direct Credly verification links. The badge grid is designed to expand cleanly as new cloud and AI certifications are earned.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <p>&copy; 2026 Ron Jackson &mdash; <a href="mailto:jacksonr1978@gmail.com">jacksonr1978@gmail.com</a></p>
+            <p><a href="https://www.ron-jackson.co.uk">www.ron-jackson.co.uk</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron Jackson | Cloud Resume Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Keep the full desktop navigation on a single line. */
+        @media (min-width: 901px) {
+            header .wrapper { max-width: 1280px; }
+            header nav ul { flex-wrap: nowrap; gap: 0.9rem; }
+            header nav a { white-space: nowrap; font-size: 0.92rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="wrapper">
+            <a href="index.html" class="site-title">Ron <span>Jackson</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="written-statement.html">Written Statement</a></li>
+                    <li><a href="work-experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="cloud-resume-challenge.html" class="active">Cloud Resume Challenge</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="wrapper">
+
+            <div class="page-hero">
+                <h1>Cloud Resume Challenge</h1>
+                <p>Building a cloud-native personal website — the full story and technical breakdown.</p>
+            </div>
+
+            <!-- Banner -->
+            <div class="challenge-banner">
+                <h2>☁️ The Cloud Resume Challenge</h2>
+                <p>
+                    An initiative by Forrest Brazeal to help cloud practitioners demonstrate real-world skills
+                    by building and deploying a resume as a live cloud application — not just another PDF.
+                </p>
+            </div>
+
+            <!-- What Is It -->
+            <p class="section-label">What Is It?</p>
+            <div class="card">
+                <h2>Overview</h2>
+                <p>
+                    The <strong>Cloud Resume Challenge</strong> is a multi-step hands-on project that takes you
+                    through building a complete cloud-hosted website using real AWS (or Azure/GCP) services.
+                    It's designed to bridge the gap between passing a certification exam and actually doing
+                    cloud work — demonstrating that you can build, deploy, secure, and monitor a live application.
+                </p>
+                <p style="margin-top:0.75rem;">
+                    This site <em>is</em> my Cloud Resume Challenge. Every page, every feature, is part of
+                    the deployment and architecture I built from scratch.
+                </p>
+            </div>
+
+            <!-- Steps -->
+            <p class="section-label">Challenge Steps</p>
+            <div class="challenge-progress">
+                <span><strong>10</strong> completed</span>
+                <span><strong>Step 10</strong> next</span>
+                <span><strong>5</strong> remaining</span>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card done">
+                    <div class="step-number">01</div>
+                    <h3>Certification</h3>
+                    <p>Earn a cloud certification before starting.</p>
+                </div>
+                <div class="step-card done">
+                    <div class="step-number">02</div>
+                    <h3>HTML &amp; CSS</h3>
+                    <p>Write resume in HTML, styled with CSS.</p>
+                </div>
+                <div class="step-card done">
+                    <div class="step-number">03</div>
+                    <h3>Static Website</h3>
+                    <p>Deploy site as a static S3 website.</p>
+                </div>
+                <div class="step-card done">
+                    <div class="step-number">04</div>
+                    <h3>HTTPS</h3>
+                    <p>Serve via HTTPS using CloudFront.</p>
+                </div>
+                <div class="step-card done">
+                    <div class="step-number">05</div>
+                    <h3>Custom DNS</h3>
+                    <p>Point ron-jackson.co.uk to CloudFront.</p>
+                </div>
+                <div class="step-card done">
+                    <div class="step-number">06</div>
+                    <h3>Visitor Counter</h3>
+                    <p>JavaScript counter backed by DynamoDB.</p>
+                </div>
+                <div class="step-card done">
+                    <div class="step-number">07</div>
+                    <h3>Database</h3>
+                    <p>DynamoDB stores visitor count.</p>
+                </div>
+                <div class="step-card done">
+                    <div class="step-number">08</div>
+                    <h3>API</h3>
+                    <p>API Gateway + Lambda to serve count.</p>
+                </div>
+                <div class="step-card done">
+                    <div class="step-number">09</div>
+                    <h3>Python Lambda</h3>
+                    <p>Lambda function written in Python.</p>
+                </div>
+                <div class="step-card planned">
+                    <div class="step-number">10</div>
+                    <h3>Tests</h3>
+                    <p>Python tests written for Lambda function.</p>
+                </div>
+                <div class="step-card planned">
+                    <div class="step-number">11</div>
+                    <h3>Infrastructure as Code</h3>
+                    <p>Infra defined in SAM / Terraform.</p>
+                </div>
+                <div class="step-card done">
+                    <div class="step-number">12</div>
+                    <h3>Source Control</h3>
+                    <p>Code version-controlled in GitHub.</p>
+                </div>
+                <div class="step-card planned">
+                    <div class="step-number">13</div>
+                    <h3>CI/CD Backend</h3>
+                    <p>GitHub Actions deploys backend on push.</p>
+                </div>
+                <div class="step-card planned">
+                    <div class="step-number">14</div>
+                    <h3>CI/CD Frontend</h3>
+                    <p>GitHub Actions deploys frontend on push.</p>
+                </div>
+                <div class="step-card planned">
+                    <div class="step-number">15</div>
+                    <h3>Blog Post</h3>
+                    <p>Written a post documenting the journey.</p>
+                </div>
+            </div>
+
+            <!-- Architecture -->
+            <p class="section-label">Architecture</p>
+            <div class="card">
+                <h2>Current &amp; Planned Architecture</h2>
+                <p>This section tracks the architecture as the Cloud Resume Challenge progresses. Completed components are shown separately from later challenge stages.</p>
+                <h3 style="margin-top:1rem;">Implemented so far</h3>
+                <ul style="margin-top:0.75rem;">
+                    <li><strong>Frontend:</strong> HTML, CSS and JavaScript</li>
+                    <li><strong>Hosting:</strong> Static website hosted in Amazon S3</li>
+                    <li><strong>CDN / HTTPS:</strong> Amazon CloudFront</li>
+                    <li><strong>DNS:</strong> Custom domain configuration</li>
+                    <li><strong>Visitor counter:</strong> JavaScript frontend connected to a persistent AWS backend</li>
+                    <li><strong>Database:</strong> Amazon DynamoDB stores the persistent count</li>
+                    <li><strong>API:</strong> Amazon API Gateway exposes the visitor-count endpoint</li>
+                    <li><strong>Compute:</strong> AWS Lambda (Python) atomically increments and returns the count</li>
+                </ul>
+                <h3 style="margin-top:1rem;">Current stage</h3>
+                <p>Visitor counter backend implemented and tested, and project source is now version-controlled in GitHub. Next stages focus on tests, Infrastructure as Code and deployment automation.</p>
+                <h3 style="margin-top:1rem;">Planned later stages</h3>
+                <ul style="margin-top:0.75rem;">
+                    <li>Automated tests for the visitor-counter backend</li>
+                    <li>Infrastructure as Code</li>
+                    <li>CI/CD pipelines for backend and frontend deployments</li>
+                    <li>Project blog post / retrospective</li>
+                </ul>
+                <div class="badge-list" style="margin-top:1rem;">
+                    <span class="badge">S3</span>
+                    <span class="badge">CloudFront</span>
+                    <span class="badge">DNS</span>
+                    <span class="badge">DynamoDB</span>
+                    <span class="badge">API Gateway</span>
+                    <span class="badge">Lambda</span>
+                </div>
+            </div>
+
+            <!-- Lessons Learned -->
+            <p class="section-label">Reflections</p>
+            <div class="card">
+                <h2>What I&rsquo;m Learning</h2>
+                <p>
+                    The Cloud Resume Challenge is an active project. Rather than presenting unfinished stages as completed,
+                    this page will be updated as each stage is implemented and tested.
+                </p>
+                <ul style="margin-top:0.75rem;">
+                    <li>Building and styling a responsive portfolio with HTML and CSS</li>
+                    <li>Hosting a static site using AWS services</li>
+                    <li>Configuring a custom domain and HTTPS delivery</li>
+                    <li>Documenting changes as practical project evidence</li>
+                    <li>Implemented a persistent visitor counter using DynamoDB, API Gateway and a Python Lambda function</li>
+                    <li>Moved the Website Project source and engineering documentation into GitHub version control</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="wrapper">
+            <p>&copy; 2026 Ron Jackson &mdash; <a href="mailto:jacksonr1978@gmail.com">jacksonr1978@gmail.com</a></p>
+            <p><a href="https://www.ron-jackson.co.uk">www.ron-jackson.co.uk</a></p>
+        </div>
+    </footer>
+</body>
+</html>

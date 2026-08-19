@@ -1,0 +1,11 @@
+WEB-07 Formspree setup
+
+Configured endpoint:
+https://formspree.io/f/xppaovaz
+
+After deployment:
+1. Upload the website files to the S3 bucket used by the live site.
+2. Invalidate the relevant CloudFront paths (or /* during active testing).
+3. Open the live Contact form and submit a real test message.
+4. Confirm the message arrives at the Formspree destination inbox.
+5. Test validation/error handling before marking WEB-07 complete.

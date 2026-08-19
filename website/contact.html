@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron Jackson | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+            gap: 1.5rem;
+            align-items: start;
+        }
+        .contact-card {
+            background: #ffffff;
+            border: 1px solid #dbe4f0;
+            border-radius: 16px;
+            padding: 1.75rem;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        }
+        .contact-card h2 { margin-top: 0; }
+        .contact-intro { color: #475569; margin-bottom: 1.5rem; }
+        .contact-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1rem; }
+        .form-group label { font-weight: 600; color: #111827; }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            background: #ffffff;
+            color: #111827;
+            padding: 0.9rem 1rem;
+            font: inherit;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: #94a3b8; }
+        .form-group textarea { min-height: 170px; resize: vertical; }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--electric-blue-glow, #38bdf8);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.14);
+        }
+        .contact-submit { border: 0; cursor: pointer; }
+        .contact-submit:disabled { opacity: 0.7; cursor: wait; }
+        .form-message {
+            display: none;
+            margin-top: 1rem;
+            padding: 0.9rem 1rem;
+            border-radius: 10px;
+            line-height: 1.5;
+        }
+        .form-message.success {
+            display: block;
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.35);
+        }
+        .form-message.error {
+            display: block;
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(239, 68, 68, 0.35);
+        }
+        .contact-details { display: grid; gap: 1rem; }
+        .contact-detail {
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .contact-detail:last-child { border-bottom: 0; }
+        .contact-detail strong { display: block; margin-bottom: 0.35rem; }
+        .contact-detail a { color: var(--electric-blue-glow, #38bdf8); }
+        .contact-note { color: #64748b; font-size: 0.9rem; line-height: 1.6; }
+        @media (max-width: 800px) {
+            .contact-layout { grid-template-columns: 1fr; }
+            .contact-form-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <style>
+        /* Keep the full desktop navigation on a single line. */
+        @media (min-width: 901px) {
+            header .wrapper { max-width: 1280px; }
+            header nav ul { flex-wrap: nowrap; gap: 0.9rem; }
+            header nav a { white-space: nowrap; font-size: 0.92rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <a href="index.html" class="site-title">Ron <span>Jackson</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="written-statement.html">Written Statement</a></li>
+                    <li><a href="work-experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="cloud-resume-challenge.html">Cloud Resume Challenge</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="page-hero">
+                <h1>Contact</h1>
+                <p>Get in touch about cloud, AI, technology roles, projects or professional opportunities.</p>
+            </div>
+
+            <p class="section-label">Get In Touch</p>
+            <div class="contact-layout">
+                <section class="contact-card">
+                    <h2>Send Me a Message</h2>
+                    <p class="contact-intro">Use the form below and I’ll get back to you as soon as I can.</p>
+
+                    <form id="contact-form" method="POST" novalidate>
+                        <div class="contact-form-grid">
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Jane Smith" maxlength="120" autocomplete="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="jane@example.com" maxlength="254" autocomplete="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What’s this about?" maxlength="180">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Your message here..." maxlength="5000" required></textarea>
+                        </div>
+
+                        <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;">
+                        <button type="submit" class="btn btn-primary contact-submit" id="contact-submit">Send Message &rarr;</button>
+                    </form>
+
+                    <div class="form-message" id="form-status" role="status" aria-live="polite"></div>
+                </section>
+
+                <aside class="contact-card">
+                    <h2>Contact Details</h2>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <strong>Email</strong>
+                            <a href="mailto:jacksonr1978@gmail.com">jacksonr1978@gmail.com</a>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Website</strong>
+                            <a href="https://www.ron-jackson.co.uk">www.ron-jackson.co.uk</a>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>LinkedIn</strong>
+                            <a href="https://www.linkedin.com/in/ronjackson" target="_blank" rel="noopener noreferrer">linkedin.com/in/ronjackson</a>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Current focus</strong>
+                            <span>Cloud engineering, AI and practical portfolio projects.</span>
+                        </div>
+                    </div>
+                    <p class="contact-note">The form is protected with basic client-side validation and a honeypot field, and submissions are handled securely through Formspree.</p>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <p>&copy; 2026 Ron Jackson &mdash; <a href="mailto:jacksonr1978@gmail.com">jacksonr1978@gmail.com</a></p>
+            <p><a href="https://www.ron-jackson.co.uk">www.ron-jackson.co.uk</a></p>
+        </div>
+    </footer>
+
+    <script src="contact-config.js"></script>
+    <script>
+        const form = document.getElementById('contact-form');
+        const statusBox = document.getElementById('form-status');
+        const submitButton = document.getElementById('contact-submit');
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            statusBox.className = 'form-message';
+            statusBox.textContent = '';
+
+            if (!form.reportValidity()) return;
+
+            const endpoint = window.CONTACT_FORM_ENDPOINT || '';
+            if (!endpoint) {
+                statusBox.className = 'form-message error';
+                statusBox.textContent = 'The contact form is temporarily unavailable. Please use the email address shown on this page.';
+                return;
+            }
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (!response.ok) throw new Error('Submission failed');
+
+                form.reset();
+                statusBox.className = 'form-message success';
+                statusBox.textContent = 'Thanks for your message! I’ll get back to you soon.';
+            } catch (error) {
+                statusBox.className = 'form-message error';
+                statusBox.textContent = 'Sorry, your message could not be sent. Please try again or email me directly.';
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message →';
+            }
+        });
+    </script>
+</body>
+</html>
