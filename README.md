@@ -1,71 +1,65 @@
-Cloud Resume & Portfolio Website
+# 🌐 Cloud Resume & Portfolio Website
 
-A cloud-hosted portfolio website built as the first completed phase of my wider Cloud Resume Challenge journey.
+A production portfolio website hosted on AWS and built as the first completed phase of my wider Cloud Resume Challenge journey.
 
-Live site: https://www.ron-jackson.co.uk
-Repository: https://github.com/Jaron1978/website-project
-Status: Website Phase 1 complete · Wider Cloud Resume Challenge ongoing
+<p align="center">
+  <a href="https://www.ron-jackson.co.uk">🌍 Live Website</a> •
+  <a href="https://github.com/Jaron1978/website-project">📁 Repository</a> •
+  <a href="docs/architecture.md">🏗️ Architecture</a> •
+  <a href="docs/challenges.md">🧠 Engineering Challenges</a>
+</p>
 
-Project Overview
+---
 
-The goal of this project was to build more than a static CV.
+## 🚀 Project Snapshot
 
-I wanted a live portfolio that demonstrates practical cloud skills, documents the engineering decisions behind the build, and provides a platform that can grow alongside future Cloud and AI projects.
+✅ **Website Phase 1 Complete**  
+🔄 **Cloud Resume Challenge Ongoing**  
+☁️ **AWS Hosted**  
+🔐 **HTTPS / Custom Domain**  
+⚡ **Serverless Visitor Counter**  
+📊 **Project Delivery Board**
 
-The finished website includes a responsive multi-page portfolio, custom domain and HTTPS delivery, a persistent AWS-backed visitor counter, a working contact form, certification verification links, and a project delivery board that records the work completed during Website Phase 1.
+## ✨ Key Features
 
-Key Features
-
-* Responsive multi-page portfolio website
-* Custom domain with HTTPS
-* AWS-backed persistent visitor counter
-* Dedicated contact page with working form submission
-* Certification verification links
-* Projects portfolio with dedicated project pages
-* Kanban-style project delivery board
-* Cloud Resume Challenge documentation
-* Architecture, decision and lessons-learned records
+**🌐 Portfolio:** Responsive multi-page website · Dedicated project pages · Certification verification  
+**☁️ Cloud:** S3 · CloudFront · Route 53 · ACM  
+**⚡ Serverless:** API Gateway · Lambda · DynamoDB visitor counter  
+**📨 Integration:** Formspree contact handling  
+**📋 Delivery:** Kanban project board · Architecture · Decision & lessons-learned documentation
 
 ## Architecture
 
 ![Cloud Resume & Portfolio Website Architecture](diagrams/Cloud%20Resume%20and%20Website.png)
 
-Current production services and components include:
+### ☁️ Production Architecture
 
-* Amazon S3 — static website assets
-* Amazon CloudFront — content delivery and HTTPS front end
-* Amazon Route 53 — DNS for ron-jackson.co.uk
-* AWS Certificate Manager (ACM) — TLS certificate for the apex and www domains
-* Amazon API Gateway (HTTP API) — visitor counter API endpoint
-* AWS Lambda (Python) — visitor counter application logic
-* Amazon DynamoDB — persistent visitor count storage
-* Formspree — contact form handling
-* HTML / CSS / JavaScript — frontend
+The live website uses a serverless AWS architecture for secure content delivery and the persistent visitor counter.
 
-See docs/architecture.md for the technical breakdown.
+**Website:** Route 53 → CloudFront → S3  
+**Visitor Counter:** API Gateway → Lambda (Python) → DynamoDB  
+**Security:** ACM · HTTPS  
+**Contact:** Formspree
 
-Technologies
+[View the detailed architecture documentation →](docs/architecture.md)
 
-Cloud: AWS · S3 · CloudFront · Route 53 · ACM · API Gateway · Lambda · DynamoDB
-Development: Python · HTML · CSS · JavaScript
-Other: Formspree · Git · GitHub
+## 🛠️ Technology Stack
 
-What This Repository Is For
+**☁️ AWS:** S3 · CloudFront · Route 53 · ACM · API Gateway · Lambda · DynamoDB  
+**💻 Development:** Python · HTML · CSS · JavaScript  
+**🔧 Tooling & Integration:** Git · GitHub · Formspree
 
-This repository is both the source location for the project and an engineering record of how it evolved.
+## 🧠 Engineering Highlights
 
-The website shows the polished outcome; this repository explains the decisions behind it.
+This project records the engineering decisions and troubleshooting behind the finished portfolio — not just the final result.
 
-The documentation focuses on:
+- **Persistent visitor counter** — replaced browser-only storage with API Gateway, Lambda and DynamoDB
+- **HTTPS & domain configuration** — implemented CloudFront, ACM and Route 53 correctly
+- **Portfolio restructuring** — evolved the site into dedicated project pages with a Kanban delivery board
+- **Contact handling** — separated the contact experience while maintaining reliable form submission
+- **Responsive development** — improved navigation and layout as the portfolio expanded
 
-1. The problem or requirement.
-2. The options considered.
-3. The trade-offs behind the chosen solution.
-4. How the solution was implemented.
-5. How the result was verified.
-6. What I learned from the work.
-
-Selected Engineering Challenges
+[Read the engineering challenges →](docs/challenges.md) · [Decision log →](docs/decision-log.md) · [Lessons learned →](docs/lessons-learned.md)
 
 The most useful stories from Website Phase 1 are documented in docs/challenges.md.
 
@@ -78,59 +72,41 @@ Examples include:
 * Building a certification page that separates earned credentials from in-progress goals and provides verification links.
 * Improving navigation and responsive behaviour as the site expanded.
 
-Project Status
+## 🗺️ Status & Roadmap
 
-✅ Completed: Cloud Resume & Portfolio Website — Phase 1
+### ✅ Website Phase 1 — Complete
 
-Website Phase 1 was managed through tasks WEB-01 to WEB-21 and is complete.
+Website Phase 1 was delivered through tasks `WEB-01` to `WEB-21`, establishing the production portfolio and its AWS-backed functionality.
 
-🔄 Ongoing: Cloud Resume Challenge
+### 🔄 Cloud Resume Challenge — Ongoing
 
-The broader Cloud Resume Challenge remains in progress.
+The wider Cloud Resume Challenge continues beyond the completed website phase. Only genuinely completed work is marked as complete.
 
-Items that have not genuinely been completed will not be represented here as complete simply to make the project appear further along.
+### 🌃 Portfolio Phase 2 — Planned
 
-Repository Structure
+The next evolution of the portfolio will introduce the **London Cloud Experience**, including:
 
-.
-├── README.md
-├── docs/
-│   ├── architecture.md
-│   ├── challenges.md
-│   ├── decision-log.md
-│   └── lessons-learned.md
-├── website/
-│   ├── index.html
-│   ├── styles.css
-│   ├── project-01.html
-│   └── ...
-├── backend/
-│   └── README.md
-└── diagrams/
-    └── README.md
+- Full-screen London-at-night welcome experience
+- Clear routes into the existing portfolio
+- Downloadable CV access
+- Further Cloud and AI enhancements
 
-The website/ folder contains the reviewed Website Project source.
+- ## 📚 Documentation & Repository
 
-The backend/ folder is intentionally reserved for the real deployed visitor-counter Lambda source once it has been exported and reviewed; no backend code is fabricated in this repository.
+The repository contains the reviewed website source alongside the engineering documentation created during development.
 
-Future Development
+**📁 Website source:** [`website/`](website/)  
+**🏗️ Architecture:** [`docs/architecture.md`](docs/architecture.md)  
+**🧠 Engineering challenges:** [`docs/challenges.md`](docs/challenges.md)  
+**📝 Decision log:** [`docs/decision-log.md`](docs/decision-log.md)  
+**💡 Lessons learned:** [`docs/lessons-learned.md`](docs/lessons-learned.md)
 
-The completed Phase 1 website now provides the foundation for Portfolio Website Phase 2 — Cloud Experience.
+> The `backend/` directory is reserved for the real deployed visitor-counter Lambda source once it has been exported and reviewed. No backend implementation is fabricated for the repository.
 
-Planned development includes:
+---
 
-* A full-screen London-at-night welcome experience
-* Clear visitor routes into the existing portfolio
-* Downloadable CV access
-* RonBot integration as an optional AI-powered portfolio interface
-* Further Cloud and AI enhancements as the wider portfolio develops
-
-Phase 2 is being treated as a separate project so the completed Phase 1 implementation remains clearly documented.
-
-Key Principle
-
-The most important part of this project is not that every decision was perfect on the first attempt.
-
-The value is in identifying problems, evaluating sensible alternatives, implementing a proportionate solution, testing the result, and documenting what changed.
-
-That is the engineering story this repository is designed to show.
+<p align="center">
+  <a href="https://www.ron-jackson.co.uk">🌍 Live Website</a> •
+  <a href="https://github.com/Jaron1978">👤 GitHub Profile</a> •
+  <a href="https://github.com/Jaron1978/RonBot-repo">🤖 RonBot</a>
+</p>
