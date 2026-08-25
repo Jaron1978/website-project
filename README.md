@@ -26,7 +26,9 @@ Key Features
 * Cloud Resume Challenge documentation
 * Architecture, decision and lessons-learned records
 
-Architecture
+## Architecture
+
+![Cloud Resume & Portfolio Website Architecture](diagrams/website-architecture.png)
 
 Current production services and components include:
 
