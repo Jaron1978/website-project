@@ -28,7 +28,7 @@ Key Features
 
 ## Architecture
 
-![Cloud Resume & Portfolio Website Architecture](diagrams/Cloud Resume and Website.png)
+![Cloud Resume & Portfolio Website Architecture](diagrams/Cloud%20Resume%20and%20Website.png)
 
 Current production services and components include:
 
