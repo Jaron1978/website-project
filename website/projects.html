@@ -19,6 +19,190 @@
         .project-card-link:hover .project-card, .project-card-link:focus-visible .project-card { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(15,23,42,.10); }
         .project-card-link:focus-visible { outline: 3px solid #7c3aed; outline-offset: 4px; border-radius: 16px; }
         .project-open-cue { margin-top: 1rem; font-weight: 700; color: #6d28d9; }
+
+.projects-page-hero {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.projects-hero-image {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+@media (max-width: 800px) {
+    .projects-page-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-hero-image {
+        max-height: 280px;
+    }
+}
+
+/* Projects portfolio grid */
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1.25rem;
+
+    align-items: stretch;
+
+    margin-bottom: 2rem;
+
+}
+
+.project-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+
+    padding: 1.25rem;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(148, 163, 184, 0.35);
+
+    border-radius: 16px;
+
+    box-sizing: border-box;
+
+}
+
+.project-card-topline {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+
+}
+
+.project-id {
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+}
+
+.project-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 0.28rem 0.6rem;
+
+    border-radius: 999px;
+
+    border: 1px solid transparent;
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+}
+
+.status-complete {
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    border-color: #86efac;
+
+}
+
+.status-active {
+
+    background: #d1fae5;
+
+    color: #047857;
+
+    border-color: #6ee7b7;
+
+}
+
+.status-ongoing {
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    border-color: #93c5fd;
+
+}
+
+.status-planned {
+
+    background: #ede9fe;
+
+    color: #6d28d9;
+
+    border-color: #c4b5fd;
+
+}
+
+.project-card h2 {
+
+    margin-top: 0;
+
+}
+
+.project-summary {
+
+    flex-grow: 1;
+
+}
+
+.project-open-cue {
+
+    margin-top: auto;
+
+    padding-top: 1rem;
+
+}
+
+@media (max-width: 1000px) {
+
+    .projects-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .projects-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
 </style>
 </head>
 <body>
@@ -68,8 +252,8 @@
 <a class="project-card-link" href="project-02.html"><article class="project-card">
 <div class="project-card-topline">
 <span class="project-id">PROJECT 02</span>
-<span class="project-status status-active">IN PROGRESS</span>
-</div>
+<span class="project-status status-ongoing">IN PROGRESS</span>
+</div> 
 <h2>Ron Bot</h2>
 <p class="project-summary">An in-progress portfolio AI assistant now running through AWS API Gateway and Lambda, demonstrating practical AWS, Python, grounded retrieval and frontend integration skills.</p>
 <div class="badge-list">
@@ -81,17 +265,20 @@
 <span class="project-id">PROJECT 03</span>
 <span class="project-status status-planned">PLANNED</span>
 </div>
+
 <h2>Azure AI Project</h2>
 <p class="project-summary">A future Microsoft Azure AI build that will provide practical evidence alongside certification study and broaden the portfolio across cloud platforms.</p>
 <div class="badge-list">
 <span class="badge">Azure</span><span class="badge">AI</span><span class="badge">Microsoft</span>
 </div>
 <div class="project-open-cue">View project →</div></article></a>
-<a class="project-card-link" href="cloud-resume-challenge.html"><article class="project-card project-card-active">
+<a class="project-card-link" href="cloud-resume-challenge.html"><article class="project-card">
+
 <div class="project-card-topline">
 <span class="project-id">PROJECT 04</span>
-<span class="project-status status-active">ONGOING</span>
+<span class="project-status status-ongoing">ONGOING</span>
 </div>
+
 <h2>Cloud Resume Challenge</h2>
 <p class="project-summary">Continuing the broader Cloud Resume Challenge beyond the completed portfolio website, with progress tracked honestly as the remaining cloud engineering stages are completed.</p>
 <div class="badge-list">
@@ -102,8 +289,30 @@
 <strong>Ongoing challenge</strong>
 </div>
 <div class="project-open-cue">View project →</div></article></a>
-</div>
 
+<a class="project-card-link" href="project-05.html"><article class="project-card">
+<div class="project-card-topline">
+<span class="project-id">PROJECT 05</span>
+<span class="project-status status-planned">PLANNED</span>
+</div>
+<h2>Portfolio Phase 2 — Cloud Experience</h2>
+<p class="project-summary">The next evolution of the portfolio: an immersive cloud-focused experience combining the London welcome page, downloadable CV, RonBot integration and practical AI-powered portfolio features.</p>
+<div class="badge-list">
+<span class="badge">AWS</span><span class="badge">Cloud</span><span class="badge">AI</span><span class="badge">Portfolio</span>
+</div>
+<div class="project-open-cue">View project →</div></article></a>
+
+<a class="project-card-link" href="project-06.html"><article class="project-card">
+<div class="project-card-topline">
+<span class="project-id">PROJECT 06</span>
+<span class="project-status status-planned">PLANNED</span>
+</div>
+<h2>Google AI Project</h2>
+<p class="project-summary">A future Google Cloud AI build exploring Vertex AI, Gemini and practical AI services, creating hands-on experience alongside the Google AI learning and certification path.</p>
+<div class="badge-list">
+<span class="badge">Google Cloud</span><span class="badge">Vertex AI</span><span class="badge">Gemini</span><span class="badge">AI</span>
+</div>
+<div class="project-open-cue">View project →</div></article></a>
 
 </div>
 </main>
