@@ -27,3 +27,11 @@ As the site expanded, dedicated pages, clearer navigation and a project index be
 ## 7. Build for extension, not hypothetical complexity
 
 The site now has room for additional projects and certifications, but the architecture remains proportionate to today's requirements. Future capabilities can be added when they become real needs.
+
+## 8. Establish and protect a clear source of truth
+
+Continued development caused the local and production versions of the portfolio to diverge, with newer content existing on different sides. A page-by-page reconciliation was required before the site could be safely redeployed.
+
+The local repository was re-established as the canonical source of truth and the complete reviewed site was deployed to S3. When some pages initially appeared stale after deployment, the delivery path was validated through S3, CloudFront and Route 53, with cache-busting requests confirming that the deployed content was correct.
+
+This reinforced the importance of maintaining a clear source of truth, deploying from a controlled state and distinguishing deployment problems from caching behaviour before changing infrastructure.
