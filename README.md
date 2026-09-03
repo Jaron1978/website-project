@@ -58,6 +58,7 @@ This project records the engineering decisions and troubleshooting behind the fi
 - **Portfolio restructuring** — evolved the site into dedicated project pages with a Kanban delivery board
 - **Contact handling** — separated the contact experience while maintaining reliable form submission
 - **Responsive development** — improved navigation and layout as the portfolio expanded
+- **- **Production source-of-truth & cache troubleshooting** — reconciled diverged local and production website content, re-established the local repository as the canonical source, redeployed the site and traced an apparent production mismatch across S3, CloudFront, Route 53 and browser caching
 
 [Read the engineering challenges →](docs/challenges.md) · [Decision log →](docs/decision-log.md) · [Lessons learned →](docs/lessons-learned.md)
 
@@ -71,6 +72,7 @@ Examples include:
 * Restructuring the Projects area into a portfolio index with dedicated project pages and a Kanban-style delivery board.
 * Building a certification page that separates earned credentials from in-progress goals and provides verification links.
 * Improving navigation and responsive behaviour as the site expanded.
+* Reconciling local and production versions of the website, establishing a clear source of truth and diagnosing stale browser responses through the S3 → CloudFront → Route 53 delivery path.
 
 ## 🗺️ Status & Roadmap
 
@@ -87,11 +89,12 @@ The wider Cloud Resume Challenge continues beyond the completed website phase. O
 The next evolution of the portfolio will introduce the **London Cloud Experience**, including:
 
 - Full-screen London-at-night welcome experience
-- Clear routes into the existing portfolio
-- Downloadable CV access
-- Further Cloud and AI enhancements
+- Explore Portfolio, Download CV and Ask RonBot visitor routes
+- Professionally presented downloadable CV
+- RonBot integration and contextual AI-powered portfolio features
+- Continued evolution of the existing Phase 1 portfolio rather than replacement
 
-- ## 📚 Documentation & Repository
+## 📚 Documentation & Repository
 
 The repository contains the reviewed website source alongside the engineering documentation created during development.
 
