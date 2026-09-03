@@ -170,3 +170,34 @@ The navigation remains complete while behaving more reliably across desktop and 
 ### Lesson
 
 Responsive design needs to be revisited as information architecture changes. A layout that worked for five links may not work for eight.
+
+---
+
+## Production source-of-truth and cache troubleshooting
+
+### Problem
+
+Continued website development had caused the local and production versions of the portfolio to diverge. Some pages contained newer local changes while others contained newer production content, meaning neither version could safely be treated as the complete source of truth.
+
+### Decision
+
+Perform a page-by-page reconciliation before making any further production changes, establish the reviewed local repository as the canonical source and then deploy the complete reconciled website.
+
+### Implementation
+
+- Compared the local and production versions of the portfolio page by page.
+- Preserved the newest valid content from each side.
+- Established the reconciled local website as the canonical source of truth.
+- Uploaded the reviewed website files to the production S3 bucket.
+- Invalidated the CloudFront distribution.
+- Verified the S3 objects and AWS delivery path.
+- Investigated apparent stale content on the `www` domain.
+- Used cache-busting requests to distinguish cached browser responses from the actual deployed content.
+
+### Result
+
+The local repository, S3-hosted production content and public website were brought back into alignment. The apparent post-deployment mismatch was confirmed to be caching behaviour rather than an incorrect S3 upload, CloudFront origin or Route 53 configuration.
+
+### Lesson
+
+Production troubleshooting should verify each layer before infrastructure is changed. A stale response does not necessarily mean a failed deployment, and maintaining a clearly defined source of truth significantly reduces deployment risk.
