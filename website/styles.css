@@ -43,6 +43,9 @@ main { flex:1; padding:3rem 0 4rem; }
 .btn-outline { background:transparent; color:var(--electric-blue-glow); border:1px solid var(--electric-blue); }
 .btn-outline:hover { background:rgba(0,71,255,.1); box-shadow:0 0 12px rgba(0,71,255,.3); }
 .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-bottom:2rem; }
+.explore-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.explore-grid > a { display:flex; }
+.explore-grid .card { box-sizing:border-box; margin-bottom:0; width:100%; height:100%; }
 .stat-box { background:var(--bg-card); border:1px solid var(--electric-blue); border-radius:6px; padding:1.2rem 1.5rem; text-align:center; box-shadow:0 0 10px rgba(0,71,255,.1); }
 .stat-box .stat-number { font-size:2rem; font-weight:800; color:var(--electric-blue-glow); font-family:var(--font-mono); display:block; }
 .stat-box .stat-label { font-size:.85rem; color:var(--text-muted); margin-top:.25rem; }
@@ -77,4 +80,4 @@ footer .wrapper { display:flex; align-items:center; justify-content:space-betwee
 footer p { color:var(--text-muted); font-size:.85rem; }
 footer a { color:var(--electric-blue-glow); text-decoration:none; font-size:.85rem; }
 footer a:hover { text-decoration:underline; }
-@media(max-width:768px){header .wrapper{flex-direction:column;align-items:flex-start;gap:.75rem}nav ul{gap:.1rem}nav a{font-size:.82rem;padding:.35rem .65rem}.home-hero{flex-direction:column-reverse;text-align:center}.home-hero-text h1{font-size:2rem}.home-links{justify-content:center}.two-col{grid-template-columns:1fr}.page-hero h1{font-size:1.7rem}footer .wrapper{flex-direction:column;text-align:center}}
+@media(max-width:768px){header .wrapper{flex-direction:column;align-items:flex-start;gap:.75rem}nav ul{gap:.1rem}nav a{font-size:.82rem;padding:.35rem .65rem}.home-hero{flex-direction:column-reverse;text-align:center}.home-hero-text h1{font-size:2rem}.home-links{justify-content:center}.two-col{grid-template-columns:1fr}.explore-grid{grid-template-columns:1fr}.page-hero h1{font-size:1.7rem}footer .wrapper{flex-direction:column;text-align:center}}
